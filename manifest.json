@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+    "name": "YouTube自定義字幕上傳器",
+    "version": "1.0",
+    "description": "允許用戶上傳自定義字幕到YouTube視頻",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "*://www.youtube.com/*"
+    ],
+    "browser_action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.youtube.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
